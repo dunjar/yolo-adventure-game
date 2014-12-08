@@ -4,7 +4,14 @@ This is a repo for our moddable **HTML5 educational Adventure Game Quiz** – YO
 
 The game is made so that it's really easy to change the topic of your quiz or enter new questions and answers.
 
-Unfortunatelly we ran out of time, wanted to use PubNub API so at the time, only one player mode is implemented with 'simulated Player2'. Under description we provide the whole idea, with all features to be added.
+Unfortunatelly we ran out of time, wanted to use PubNub API so at the time, only one player mode is implemented with 'simulated Player2'. Here we explain the whole idea, with all features (also ones to be added).
+
+####Main features:
+*Easily chanegable questions and quiz theme
+*Educational 
+*Design for kids
+*One on one quiz, compete with opponent, not just answer 
+*Questions related to previous question - adventure
 
 ##Description
 
@@ -41,7 +48,7 @@ We used nginx, django, uwsgi on Koding VM
 ![](http://d.pr/i/16oaN/4h6BeYIH.jpg "Screenshot Koding")
 
 
-## APIs used
+## APIs used, other
 
 Bootstrap
 nginx
