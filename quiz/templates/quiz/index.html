@@ -1,0 +1,47 @@
+{% extends "quiz/base.html" %}
+{% load staticfiles %}
+{% block bodyclass %}containerIndex{% endblock bodyclass %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2" style="margin-bottom:1cm"><img src="{% static "yolo/img/Index_logo.png" %}"></div>
+    </div>
+    <div class="row" style="margin-bottom:5cm";>
+        <div class="col-md-8 col-md-offset-2" >
+            <div id="HowToPlay" class="howto" style="display:none">
+            <button id="HowToClose" type="button" class="btn btn-warning btn-lg btn-block";>Close</button>
+            <p><br/>The game is played by two players at the same time.</p>
+                <p>First, you will pick your name and avatar and wait for another player to join you or join another player, who is already waiting for you.</p>
+                <p>When the game begins, you will see a question or a described situation. You have to pick the right thing to do in that situation or the right answer by klicking on the correct box. You will have 1 minute to answer each question.</p>
+                <p>After both players answer the question or after one minute has passed, you will see your score, and that of your opponent. </p>
+                <p>Player with more points is the winner of the game.</p>
+
+                <p><strong><h3>Have fun and don't forget to wash your hands with soap and warm water, because - YOLO!<h3></strong></p>
+                </div>
+                <button id="HowTo" type="button" class="btn btn-warning btn-lg btn-block";>How to play</button><br/>
+                <a href="{% url "quiz.views.quiz" "yolo" %}"><button type="button" class="btn btn-warning btn-lg btn-block">Play</button></a>
+                </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+var button = document.getElementById('HowTo');
+
+button.onclick = function() {
+    var div = document.getElementById('HowToPlay');
+    if (div.style.display == 'none') {
+        div.style.display = 'block';
+    } 
+};
+
+var buttonC = document.getElementById('HowToClose');
+
+buttonC.onclick = function() {
+    var divC = document.getElementById('HowToPlay');
+    if (divC.style.display == 'block') {
+        divC.style.display = 'none';
+    } 
+};
+</script>
+
+{% endblock content %}

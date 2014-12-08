@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YOLO</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+	<link href="test.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<div class="container containerIndex" style="">
+    <div class="row vertical-center-row">
+        <div class="col-lg-12">
+            <div class="row ">
+                <div class="col-xs-4 col-xs-offset-4" >
+				<div id="HowToPlay" class="howto" style="display:none"><p>The game is played by two players at the same time.</p>
+				<p>First, you will pick your name and avatar and wait for another player to join you or join another player, who is already waiting for you.</p>
+				<p>When the game begins, you will see a question or a described situation. You have to pick the right thing to do in that situation or the right answer by klicking on the correct box. You will have 1 minute to answer each question.</p>
+				<p>After both players answer the question or after one minute has passed, you will see your score, and that of your opponent. </p>
+				<p>Player with more points is the winner of the game.</p>
+
+				<p><strong><h3>Have fun and don't forget to wash your hands with soap and warm water, because - YOLO!<h3></strong></p><button id="HowToClose" type="button" class="btn btn-warning btn-lg" "margin-top: 1cm">Close</button></div>
+				<br/><button id="HowTo" type="button" class="btn btn-warning btn-lg btn-block" style="margin-top: 8cm";>How to play</button><br/>
+				<button type="button" class="btn btn-warning btn-lg btn-block">Play</button>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+var button = document.getElementById('HowTo');
+
+button.onclick = function() {
+    var div = document.getElementById('HowToPlay');
+    if (div.style.display == 'none') {
+        div.style.display = 'block';
+    } 
+};
+
+var buttonC = document.getElementById('HowToClose');
+
+buttonC.onclick = function() {
+    var divC = document.getElementById('HowToPlay');
+    if (divC.style.display == 'block') {
+        divC.style.display = 'none';
+    } 
+};
+</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	
+  </body>
+</html>
