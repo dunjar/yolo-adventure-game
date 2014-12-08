@@ -6,12 +6,19 @@ The game is made so that it's really easy to change the topic of your quiz or en
 
 Unfortunatelly we ran out of time, wanted to use PubNub API so at the time, only one player mode is implemented with 'simulated Player2'. Here we explain the whole idea, with all features (also ones to be added).
 
-####Main features:
-*Easily chanegable questions and quiz theme
-*Educational 
-*Design for kids
-*One on one quiz, compete with opponent, not just answer 
-*Questions related to previous question - adventure
+
+####Main features:    
+
+Easily chanegable questions and quiz theme; 
+
+Educational;
+
+Design for kids;
+
+One on one quiz, compete with opponent, not just answer (to be done); 
+
+Questions related to previous question; adventure
+
 
 ##Description
 
