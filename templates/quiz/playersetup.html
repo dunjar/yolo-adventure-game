@@ -1,0 +1,53 @@
+{% extends "quiz/base.html" %}
+{% load staticfiles %}
+
+{% block bodyclass %}containerStart{% endblock bodyclass %}
+
+{% block content %}
+<form method="POST">
+{% csrf_token %}
+<div class="container" style="">
+    <div class ="row">
+        <div class="col-xs-2"></div>
+            <div class="col-xs-4  inputFields">
+            <form role="form">
+                <div class="form-group">
+                    <label for="PlayerName">1. Enter your name:</label>
+                    {% if form.name.errors %}
+                    {{form.name.errors}}
+                    {%endif%}
+                    <input id="id_name" class="form-control" maxlength="50" name="name" type="text" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                <br/>
+                    <p>2. Choose your avatar by clicking on it:</p>
+                </div>
+                </div>
+                <div class ="row">
+            </div>
+                <div class="col-md-9 col-xs-offset-3">
+                <img class="avatar" src="{% static "yolo/img/avatar/boy.png" %}">
+                <img class="avatar" src="{% static "yolo/img/avatar/girl.png" %}">
+                <img class="avatar" src="{% static "yolo/img/avatar/virus.png" %}">
+            </div>
+                <div class="col-xs-4 col-xs-offset-4" >
+                <input id="startknof" type="submit" class="btn btn-default btn-lg btn-block" style="margin-top: 2cm; display: none;" value="Start">
+                </div>
+        </div>
+    </div>
+</div>
+</form>
+<script>
+function setAvatar(aurl) {
+    $.getJSON("{% url 'quiz.views.setavatar' %}?aurl="+aurl, function(data) {
+    });
+}
+$('img.avatar').click(function(){
+    setAvatar($(this).attr('src'));
+    $(this).siblings('img').css("opacity",'0.7')
+    $(this).css("opacity",'1')
+    $("input#startknof").fadeIn();
+});
+</script>
+
+{% endblock content %}
